@@ -1,0 +1,7 @@
+Datebase includes: musics database, admin database, upload song database, request song database and suggestions database
+
+url music database: https://6073fb61066e7e0017e78b99.mockapi.io/api/thu-vien-am-nhac/musics
+url admin database: https://6073fb61066e7e0017e78b99.mockapi.io/api/thu-vien-am-nhac/admins
+url upload song database: https://6073fb61066e7e0017e78b99.mockapi.io/api/thu-vien-am-nhac/uploadSongs
+trl request song database: https://6073fb61066e7e0017e78b99.mockapi.io/api/thu-vien-am-nhac/requestSongs
+url suggestions database: https://6074636d066e7e0017e79c51.mockapi.io/api/C4EJS110-THU-VIEN-AM-NHAC/suggestions

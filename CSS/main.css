@@ -1,0 +1,1731 @@
+* { 
+    padding: 0; 
+    margin: 0; 
+    border: none; 
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+}    
+
+input {
+    height: 25px;
+}
+
+/* Header*/
+
+#header{
+    background: #094c72;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    margin-top: 0px;
+}
+
+#header a {
+    background: #094c72;
+    color: white;
+    padding: 12px 15px 12px 15px;
+    font-size: 15px;
+}
+
+#viewSearchID{
+    padding: 12px 15px 12px 15px;
+    font-size: 15px;
+}
+
+.iconHeader{
+    display: none !important;
+    color: white;
+    padding: 15px;
+}
+
+.iconHeader:hover{
+    color: #5994c4;
+    cursor: pointer;
+}
+
+.leftHeader{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.rightHeader{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+}
+
+#header a:hover{
+    transition: color 0.3s ease-out;
+    color: #5994c4;
+    cursor: pointer;
+}
+
+#logo {
+    font-weight: bold;
+    cursor: pointer;
+    color: white !important;
+}
+
+#logo:hover {
+    color: #5994c4 !important;
+}
+
+#searchHomePage {
+    width: 300px;
+    height: 22px;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #F9FBFB;
+}
+
+#searchMusic{
+    background: white;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#searchMusic li{
+    width: 100%;
+    color: black;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(110, 131, 163, 0.2), 0 6px 20px 0 rgba(135, 190, 212, 0.19);
+    padding-top: 2px;
+    text-align: center;
+}
+
+#searchMusic li:hover{
+    cursor: pointer;
+    background: #e4f0f6;
+}
+
+.nameSearch{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.singerSearch{
+    font-size: 13px;
+}
+
+.theLoai{
+    list-style-type: none;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    margin-top: 18px;
+    margin-left: -30px;
+    box-sizing: content-box;
+    min-width: 110px;
+}
+
+.theLoai li{
+    color: white;
+    background-color: #094c72;
+    border-bottom: 0.5px solid #678da3;
+    text-transform: capitalize;
+    font-size: 14px;
+    padding-top: 5px;
+    text-align: center;
+    height: 30px;
+}
+
+.theLoai li:hover{
+    cursor: pointer;
+    background:#036AA6;
+}
+
+.listMenu{
+    display: none;
+}
+
+.listMenuResponsive{
+    display: none;
+}
+
+.accountID {
+    display: none;
+}
+
+.account{
+    list-style-type: none;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    margin-top: 18px;
+    min-width: 200px;
+    margin-left: -150px;
+    box-sizing: content-box;
+}
+.account li{
+    color: white;
+    background-color: #094c72;
+    border-bottom: 0.5px solid #678da3;
+    text-transform: capitalize;
+    padding-top: 5px;
+    text-align: center;
+    height: 30px;
+    box-shadow:  0 4px 8px 0 rgba(110, 131, 163, 0.2), 0 6px 20px 0 rgba(135, 190, 212, 0.19);
+}
+
+.account li:hover{
+    cursor: pointer;
+    background:#036AA6;
+}
+
+@media( max-width: 1200px){
+    .rightHeader{
+        display: none;
+    }
+
+    .leftHeader{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #iconMenu{
+        display: block !important;
+    }
+
+    #listMenuID ul{
+        position: absolute;
+        width: 200px;
+        background: #094c72;
+        color: white;
+        padding-top: 50px;
+        height: auto;
+        text-align: left;
+        list-style-type: none;
+    }
+
+    #listMenuID li{
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0 1em;
+    }
+
+    #listMenuID li:hover{
+        cursor: pointer;
+        background: rgb(116, 171, 216);
+    }
+    
+    #listMenuID .theLoai{
+        position: absolute;
+        left: 230px;
+        width: 200px;
+        background: #094c72;
+        color: white;
+        top: 32px;
+    }
+
+    #listMenuID .account{
+        position: absolute;
+        left: 350px;
+        width: 200px;
+        background: #094c72;
+        color: white;
+        top: 192px;
+    }
+
+    .listMenu{
+        display: none;
+    }
+
+    .listMenuResponsive{
+        display: block;
+    }
+
+    .viewTL {
+        display: none;
+    }
+
+    .viewTLResponsive{
+        display: flex;
+    }
+
+    .viewAccount {
+        display: none;
+    }
+    
+    .viewAccountResponsive{
+        display: flex;
+    }
+}
+
+@media (max-width: 900px){
+    .viewSearch{
+        display: none;
+    }
+
+    .viewSearchResponsive {
+        display: block;
+    }
+
+    .viewIconSearch{
+        display: block !important;
+    }
+}
+
+
+@media (max-width: 600px){
+    .viewLogo{
+        display: block;
+    }
+
+    .viewLogoResponsive{
+        display: none;
+    }
+
+    #listMenuID ul{
+        width: 150px;
+    }
+
+    #listMenuID .theLoai{
+        left: 180px;
+        width: 150px;
+    }
+    #listMenuID .account{
+        width: 180px;
+        min-width: 150px;
+        left: 300px;
+        height: auto;
+    }
+}
+
+/*Home Page*/
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+}
+
+#banner {
+    background-image: url("https://i.imgur.com/rxh17is.jpg");
+    margin-top: 0px;
+    width: 100%;
+    height: 550px;
+    background-size: 100% 100%;
+}
+
+#bannertext {
+    padding-top: 170px;
+    padding-left: 55%;
+    padding-right: 30px;
+}
+
+#bannertext h2 {
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+}
+
+#des {
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 8px;
+    color: #f9f9f9;
+}
+
+.homePageContent{
+    display: flex;
+}
+
+#accountHPContent {
+    width: 23%;
+    margin: 40px 10px 30px 35px;
+}
+
+.accountHP {
+    height: 55px;
+}
+
+#accountPrompt {
+    font-size: 12.5px;
+    padding: 10px 15px;
+    text-align: center;
+}
+.flexcenter {
+    display: flex;
+    justify-content: center;
+}
+.flexcenter .button1 {
+    margin-right: 15px;
+    margin-left: -10px;
+}
+.column {
+    flex-direction: column;
+}
+#quote {
+    font-size: 17px;
+    padding: 30px 5px 15px 2px;
+    text-align: center;
+    font-style: italic;
+    color: #094c72;
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2019/03/14-white-grunge-brush-stroke-13.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#cite {
+    font-size: 15px;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: -10px;
+    font-style: italic;
+    color: #055a8c;
+}
+#decorimg {
+    padding-top: 10px;
+    width: 95%;
+    text-align: center;
+    opacity: 0.75;
+    margin: auto;
+}
+#heartbeat {
+    padding-top: 15px;
+    font-size: 70px;
+    margin: auto;
+    color:#055a8c;
+    transition: color 0.5s ease;
+}
+.fa-heartbeat {
+    padding-left: 5px;
+}
+#heartbeat:hover {
+    color: #c21807;
+}
+.listHomePage{
+    width: 35%;
+    margin: 40px 10px 30px 10px;
+}
+
+.listHomePage img{
+    padding-top: 3px;
+    margin: 20px auto;
+    width: 93%;
+    border-radius: 12px;
+}
+
+.headingclickable {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    color: #094c72;
+    padding-bottom: 5px;
+}
+
+.headingclickable:hover {
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.body {
+    background: white;
+    box-shadow: 0.5px 1.5px 1.5px 0px lightgray;
+}
+
+.xephang {
+    height: auto;
+}
+
+.xephang ol {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px 0px 45px;
+    list-style: none;
+}
+
+.button {
+    background-color: #055a8c; 
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.xephang li {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.xephang p {
+    display: inline-block;
+}
+
+.name {
+    font-weight: bold;
+    box-sizing: content-box;
+}
+
+.name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sttMusic {
+    margin-left: -20px;
+    width: 35px;
+}
+
+.singer {
+    font-style: italic;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+.countSeen {
+    color: #0079bf;
+    font-weight: normal;
+    font-size: 12px;
+    float: right;
+}
+
+.yeuThich { 
+    color:#c21807;
+    fill: red;
+    font-size: 12px;
+    float: right;
+    padding-right: 5px; 
+    cursor: pointer;
+}
+
+#countMusicYT {
+    text-align: center;
+    font-weight: bolder;
+    color: #0079bf;
+    width: 100%;
+}
+
+hr {
+    border: none;
+    height: 1.1px;
+    margin: 8px 0px 8px -25px;
+    background-color: #e4f0f6;
+}
+
+.xemthem {
+    text-align: center;
+}
+
+.xemthem p {
+    color: #094c72;
+    font-weight: normal;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+.xemthem p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.changeList {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #0079bf;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.countList {
+    padding: 0px 30px 0px 30px;
+    font-size: 15px;
+}
+
+.changeListUser {
+    background-color: white;
+    color: #0079bf;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    #banner {
+        background-size: 135% 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    #accountHPContent{
+        display: none !important;
+    }
+    .listHomePage {
+        width: 50%;
+    }
+}
+
+@media( max-width: 900px){
+    .homePageContent{
+        flex-direction: column;
+    }
+
+    .listHomePage{
+        margin: 20px auto;
+        width: 90%;
+    }
+    
+    #banner {
+        background-size: 170% 100%;
+    }
+
+    #bannertext{
+        padding-top: 135px;
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 600px){
+    #banner {
+        background-size: 350% 150% !important;
+        height: 360px !important;
+        background-position: 0px -133px;
+    }
+
+    #bannertext{
+        padding-top: 215px;
+        padding-left: 5%;
+    }
+}
+
+/*Page Music*/
+
+.pageMusicContent{
+    display: flex;
+    justify-content: center;
+    padding: 20px 4%;
+}
+
+.pageMusicLeft{
+    height: auto;
+    width: 65%;
+    margin: 0px 20px;
+}
+
+.pageMusicLeft div{
+    margin-top: 20px;
+}
+
+.nameMusic{
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.singerTitleMusic{
+    display: inline-block;
+    font-style: italic;
+}
+
+.titlePageMusic{
+    background: white;
+    padding: 20px 15px 20px 30px;
+}
+
+.infoMusic {
+    background: white;
+    padding: 20px 15px 20px 30px;
+}
+
+.infoMusic hr {
+    border: none;
+    height: 2px;
+    margin: 8px 0px 8px -10px;
+    background-color: #e4f0f6;
+}
+
+.pageMusicRight{
+    height: auto;
+    width: 35%;
+}
+
+.pageMusicRight h1{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.logoPageMusic{
+    text-align: center;
+}
+
+.pageMusicRight img{
+    margin-top: 20px;
+    width: 60%;
+}
+
+@media (max-width: 1200px){
+    .pageMusicContent{
+        padding: 20px 10px 20px 10px;
+    }
+
+    .titlePageMusic{
+        padding: 5px;
+    }
+
+    .pageMusicLeft{
+        margin: 0px 5px;
+    }
+}
+
+@media (max-width: 1050px){
+    .pageMusicContent{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .pageMusicLeft{
+        width: 100%;
+    }
+
+    .titlePageMusic{
+        padding-left: 20px;
+    }
+
+    .pageMusicRight{
+        width: 100% !important;
+    }
+
+    #pageMusicRight img{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .iframePageMusic iframe{
+        width: 320px;
+        height: 420px;
+    }
+    
+    .titlePageMusic{
+        text-align: center;
+    }
+
+    .pageMusicLeft{
+        width: 420px;
+    }
+
+    .titlePageMusic{
+        padding-left: 0px;
+    }
+
+    .pageMusicLeft{
+        margin: 0px;
+    }
+}
+
+@media (max-width: 500px){
+    .pageMusicLeft{
+        width: 100%;
+    }
+
+    .infoMusic {
+        padding: 15px;
+    }
+
+    .pageMusicContent{
+        margin: 0;
+    }
+}
+
+
+.button1 {
+    background-color: #0079bf; 
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-top: 15px;
+    padding: 8px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    min-width: 130px;
+}
+
+.button2 {
+    min-width: 130px;
+    background-color: #f9f9f9; 
+    border: solid 2px;
+    border-radius: 10px;
+    color: #0079bf;
+    margin-top: 15px;
+    margin-right: -10px;
+    padding: 6px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.button1:hover {
+    background-color: #055a8c;
+    cursor: pointer;
+}
+
+.button2:hover {
+    border-color: #055a8c;
+    color: #055a8c;
+    cursor: pointer;
+}
+
+/* header features */
+.containerfeatures {
+    width: auto;
+    border: 0em;
+    padding: 0em;
+    overflow: auto;
+    margin: auto;
+    background: #f9f9f9;
+    padding-top: 75px;
+}
+
+/* dang bai hat */
+@media screen and (min-width: 600px){
+    .inputleft {
+        width: 48%;
+        float: left;
+    }
+
+    .inputright {
+        width: 48%;
+        float: right;
+    }
+
+    .inputleft input {
+        width: 95%;
+        margin: 0px 0px -5px 20px;
+    }
+
+    .inputright input {
+        width: 95%;
+        margin: 0px 15px -5px 0px;
+    }
+    
+    .inputleft p {
+        margin: 15px 0px 0px 20px;
+    }
+
+    .inputright p {
+        margin: 15px 15px 0px 0px;
+    }
+
+    .longinput, .longtextarea {
+        width: 95%;
+    }
+
+    #linkadd {
+        padding-top: 15px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .huongdan {
+        float: right;
+        width: 30%;
+        margin: 20px 20px 20px 0px;
+    }
+
+    #upload {
+        width: 64%;
+        float: left;
+        margin: 20px 0px 20px 20px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+    .huongdan {
+        max-width: 750px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #upload {
+        max-width: 750px;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #upload {
+        margin: 20px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #upload {
+        margin: 20px;
+    }
+
+    #upload p {
+        margin: 0px 15px 5px 20px;
+    }
+
+    .inputleft {
+        padding-top: 15px;
+    }
+
+    .inputleft input, .inputright input, .longinput, .longtextarea {
+        width: 92%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #upload {
+        margin: 20px;
+    }
+
+    #upload p {
+        margin: 0px 15px 5px 20px;
+    }
+
+    .inputleft {
+        padding-top: 15px;
+    }
+
+    .inputleft input, .inputright input, .longinput, .longtextarea {
+        width: 88%;
+    }
+}
+
+.fillImage img {
+    width: 100%;
+    margin-bottom: -3px;
+    border-top: 20px solid #f9f9f9;
+}
+
+.huongdan {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#upload {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    color: #094c72;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.huongdan p {
+    padding: 15px 20px 20px 25px;
+    font-size: 13px;
+    text-align: justify;
+}
+
+#upload p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.halfinput {
+    margin: 0px 15px 10px 20px;
+    border-radius: 3px;
+    border-color: rgb(160, 158, 158) !important;
+}
+
+.inputleft input {
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+}
+
+.inputright input {
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+}
+
+.longinput {
+    margin: 0px 15px 10px 20px;
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+    border-color: rgb(160, 158, 158) !important;
+}
+
+.clearfloat {
+    float: none;
+    clear: both;
+}
+
+.longtextarea {
+    height: 150px;
+    margin: 0px 15px 20px 20px;
+    padding: 8px 2px 2px 8px;
+    border: 1px solid black;
+    border-radius: 3px;
+    border-color: rgb(160, 158, 158) !important;
+}
+
+input, textarea{
+    outline: unset;
+}
+
+input:hover, textarea:hover{
+    border-color: rgb(77, 148, 170) !important;
+}
+
+#linkadd {
+    margin: 0px 15px 0px 20px;
+}
+
+#lyricsadd {
+    margin: 0px 15px 5px 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.result{
+    text-align: center;
+}
+
+/* yeu cau bai hat */
+@media screen and (min-width: 1024px){
+    .huongdan {
+        float: right;
+        width: 30%;
+        margin: 20px 20px 20px 0px;
+    }
+
+    #request {
+        width: 64%;
+        float: left;
+        margin: 20px 0px 20px 20px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+    .huongdan {
+        max-width: 750px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #request {
+        max-width: 750px;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #request {
+        margin: 20px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #request {
+        margin: 20px;
+    }
+
+    #request p {
+        margin: 0px 15px 5px 20px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #request {
+        margin: 20px;
+    }
+
+    #request p {
+        margin: 0px 15px 5px 20px;
+    }
+}
+
+#request {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#request p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.longp {
+    margin: 0px 15px 5px 20px;
+}
+
+#request .inputdiv {
+    padding: 15px 0px;
+}
+
+/* lien he gop y */
+@media screen and (min-width: 1024px){
+    .huongdan {
+        float: right;
+        width: 30%;
+        margin: 20px 20px 20px 0px;
+    }
+
+    #suggestion {
+        width: 64%;
+        float: left;
+        margin: 20px 0px 20px 20px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+    .huongdan {
+        max-width: 750px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #suggestion {
+        max-width: 750px;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #suggestion {
+        margin: 20px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #suggestion {
+        margin: 20px;
+    }
+
+    #suggestion p {
+        margin: 0px 15px 5px 20px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .huongdan {
+        margin: 20px;
+    }
+
+    #suggestion {
+        margin: 20px;
+    }
+
+    #suggestion p {
+        margin: 0px 15px 5px 20px;
+    }
+}
+
+#suggestion {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#suggestion p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.longp {
+    margin: 0px 15px 5px 20px;
+}
+
+#suggestion .inputdiv {
+    padding-top: 15px;
+}
+
+/* dangnhap*/
+@media screen and (min-width: 480px){
+    #dangnhapflex{
+        flex-direction: column;
+    }
+
+    .inputFillShort {
+        width: 65%;
+        margin: 0px 0px 10px 15px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    #login > .body {
+        padding: 20px;
+    }
+}
+@media screen and (min-width: 800px){
+    #dangnhapflex {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    #dangnhapflex .huongdan {
+        float: right;
+        width: 375px;
+        margin: 20px 20px 20px 0px;
+    }
+
+    #login {
+        width: 375px;
+        float: left;
+        margin: 20px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 799px) {
+    #dangnhapflex{
+        flex-direction: column;
+    }
+
+    #dangnhapflex .huongdan {
+        margin: auto;
+        width: 375px;
+    }
+
+    #login {
+        margin: auto;
+        width: 375px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    #dangnhapflex{
+        flex-direction: column;
+    }
+
+    #dangnhapflex .huongdan {
+        margin: auto;
+        width: 88%;
+    }
+
+    #login {
+        margin: auto;
+        width: 88%;
+    }
+
+    .inputFillShort {
+        width: 99%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    #login > .body {
+        padding: 15px;
+    }
+}
+
+#login {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#login button {
+    text-align: center;
+}
+
+.inputFillShort {
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+    border-radius: 3px !important;
+    border-color: rgb(160, 158, 158) !important;
+}
+
+.loginp {
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    min-width: 120px;
+}
+
+#forgetpass {
+    font-size: 11px;
+    color: #094c72;
+    text-decoration: underline;
+    margin: -8px 0px 10px 0px !important;
+}
+
+#forgetpass:hover {
+    cursor: pointer;
+}
+
+#loginwith > .fa-facebook {
+    color: #3b5998;
+    font-size: 30px;
+}
+
+#loginwith > .fa-google {
+    color: #de5246;
+    margin: 5px 0px 0px 10px;
+    font-size: 30px;
+}
+
+#loginwith > .fab:hover {
+    cursor: pointer;
+}
+
+/* dang ky */
+@media screen and (min-width: 480px){
+    #dangkyflex{
+        flex-direction: column;
+    }
+    .inputFillShort {
+        width: 65%;
+        margin: 0px 0px 10px 15px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    #signup > .body {
+        padding: 20px;
+    }
+}
+@media screen and (min-width: 800px){
+    #dangkyflex {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    #dangkyflex .huongdan {
+        float: right;
+        width: 375px;
+        margin: 20px 20px 20px 0px;
+    }
+
+    #signup {
+        width: 475px;
+        float: left;
+        margin: 20px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 799px) {
+    #dangkyflex{
+        flex-direction: column;
+    }
+
+    #dangkyflex .huongdan {
+        margin: auto;
+        width: 375px;
+    }
+
+    #signup {
+        margin: auto;
+        width: 475px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    #dangkyflex{
+        flex-direction: column;
+    }
+
+    #dangkyflex .huongdan {
+        margin: auto;
+        width: 88%;
+    }
+
+    #dangkyflex {
+        margin: auto;
+        width: 88%;
+    }
+
+    .inputFillShort {
+        width: 99%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    #signup > .body {
+        padding: 15px;
+    }
+}
+
+#signup {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#signup button {
+    text-align: center;
+}
+
+.inputFillShort {
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+}
+
+#loginwith > .fa-facebook {
+    color: #3b5998;
+    font-size: 30px;
+}
+
+#loginwith > .fa-google {
+    color: #de5246;
+    margin: 5px 0px 0px 10px;
+    font-size: 30px;
+}
+
+#loginwith > .fab:hover {
+    cursor: pointer;
+}
+
+
+/*footer*/
+#footer{
+    background: #0079bf;
+    list-style-type: none;
+    color: #e4f0f6;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}
+
+#infoLeft{
+    display: flex;
+    width: auto;
+}
+
+#infoRight{
+    width: auto;
+}
+
+#footer li {
+    padding: 15px 10px 15px 15px;
+    font-size: 14px;
+}
+
+#infoRight p {
+    background: #0079bf;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+#footer li:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#footer i {
+    font-size: 30px;
+}
+
+@media (max-width:550px){
+    #footer{
+        flex-direction: column;
+    }
+
+    #infoRight{
+        background-color: #0079bf;
+        padding: 0;
+        width: 100%;
+    }
+
+    #infoLeft{
+        justify-content: center;
+    }
+
+    .listHomePage img{
+        display: none !important;
+    }
+
+    .name{
+        min-width: 200px;
+    }
+}
+
+/*Admin home page*/
+#chooseMenu {
+    list-style-type: none;
+    width: 20%;
+    background-color: #094c72;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: 18px;
+}
+
+#chooseMenu ul li {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+} 
+
+#chooseMenu ul li:hover {
+    background: #055a8c;
+    cursor: pointer;
+}
+
+#content {
+    margin-left: 20%;
+    padding: 16px 10px;
+    height: auto;
+}
+
+.contentAdmin{
+    padding-left: 100px;
+}
+
+#adminHomePage button{
+    padding: 10px;
+    width: auto;
+    border-radius: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#adminHomePage button:hover{
+    background-color: rgb(141, 138, 138);
+    color: white;
+}
+
+.clearAdmin {
+    background-color: rgb(81, 144, 202) !important;
+    color: white;
+}
+
+.clearAdmin:hover {
+    background-color: rgb(64, 87, 192) !important;
+}
+
+.changePage {
+    text-decoration: none;
+    border-radius: 50% !important;
+    padding: 8px 16px !important;
+}
+
+.titleContent{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    color: #094c72;
+    margin-bottom: 50px;
+}
+
+.change {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.countPage{
+    padding: 8px 16px;
+}
+
+#musicAdmin{
+    columns: 2;
+}
+
+table {
+    width:100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 15px;
+    
+}
+
+#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+
+#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+
+#t01 th {
+    background-color: black;
+    color: white;
+}
+
+.halfinputAdmin {
+    width: 200px;
+    margin: 5px 15px 10px 0px;
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+    min-height: 30px;
+    border-color: #eee;
+    border-radius: 8px;
+    outline: unset;
+}
+
+.longinputAdmin {
+    width: 631px;
+    margin: 5px 15px 10px 0px;
+    padding: 2px 2px 2px 8px;
+    border: 1px solid black;
+    min-height: 30px;
+    border-color: #eee;
+    border-radius: 8px;
+    outline: unset;
+}
+
+.longtextareaAdmin {
+    width: 631px;
+    height: 150px;
+    margin: 5px 15px 20px 0px;
+    padding: 8px 2px 2px 8px;
+    border: 1px solid black;
+    border-color: #eee;
+    border-radius: 8px;
+    outline: unset;
+}
+
+.noData{
+    text-align: center;
+    font-weight: bolder;
+    display: none;
+}
+
+#adminHomePage select {
+    margin: 5px 15px 10px 0px;
+    min-height: 20px;
+    border: 1px solid black;
+    border-color: #eee;
+    border-radius: 8px;
+    outline: unset;
+}
+
+/* animation cho cac thu */
+ @-webkit-keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+
+  .scale-up-ver-top {
+	-webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.heartbeat:hover {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
